@@ -3,8 +3,8 @@ import os
 import uuid
 from numpy import array
 
-filter_strings = ["adstec", "Truck", "Crosspad", "Test", "SRV", "SVC", "Service", "Sam Win", "vmware", "ax monitor", "axmonitor", "sharepoint",
-                  "drift", "Kursus", "Lager", "IBM", "Kødgrossisten", "Navinasa", "Navision", "Ringsted", "rs.", "Mailbox", "Stoppet"] # Should be loaded from a file in the future
+#filter_strings = ["adstec", "Truck", "Crosspad", "Test", "SRV", "SVC", "Service", "Sam Win", "vmware", "ax monitor", "axmonitor", "sharepoint",
+#                  "drift", "Kursus", "Lager", "IBM", "Kødgrossisten", "Navinasa", "Navision", "Ringsted", "rs.", "Mailbox", "Stoppet"] # Should be loaded from a file in the future
 
 new_strings = []
 
