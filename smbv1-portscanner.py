@@ -10,11 +10,11 @@ def scan_smb1(network):
     nm = nmap.PortScanner(nmap_search_path=nmap_path)
     scanning = nm.scan(hosts=network, arguments='-p445,139 --script smb-protocols.nse --open --reason -Pn -T4')
     
-    ips = [] # Gather string for all ips
+    ips = [] # Gather string value for all IPs
     for ip in scanning['scan']:
         ips.append(ip)
     
-    for ip in ips: # Iterate through all ips, using the string-value in the if-statement to access the underlying dict
+    for ip in ips: # Iterate through all IPs, using the string-value in the if-statement to access the underlying dict
         if "SMBv1" in scanning['scan'][ip]['hostscript'][0]['output']:
             result = (ip, 'SMBv1 enabled')
             scan_results.append(result)
