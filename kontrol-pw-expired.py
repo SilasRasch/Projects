@@ -89,11 +89,16 @@ df = df[~df['Display Name'].str.startswith("-")]
 # Remove all users present in following CSV/XLSX files  #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
+daysAgo = 90
+lastlogons = pd.read_excel('excel/last logon.xlsx')
+lastlogons = lastlogons[lastlogons['UserLastLogon'] >= pd.Timestamp.now()-pd.Timedelta(daysAgo, 'd')] # Remove users whose last logon was more than daysAgo:
+
 manhattan = pd.read_csv(f'excel/filters/manhattan.csv', sep=";") # Filter out everyone in Manhattan
-ext1 = pd.read_csv(f'excel/filters/ext1.csv', sep=";")  # Filter out all external members
-ext2 = pd.read_csv(f'excel/filters/ext2.csv', sep=";")  # Filter out all external members
-excluded = pd.read_excel(f'excel/filters/excluded.xlsx')  # Filter out all external members
-ext = pd.read_excel(f'excel/filters/externe.xlsx')  # Filter out all external members
+ext1 = pd.read_csv(f'excel/filters/ext1.csv', sep=";")  # Filter out pre-defined external members
+ext2 = pd.read_csv(f'excel/filters/ext2.csv', sep=";")  # Filter out pre-defined external members
+excluded = pd.read_excel(f'excel/filters/excluded.xlsx')  # Filter out continually excluded members
+ext = pd.read_excel(f'excel/filters/externe.xlsx')  # Filter out all pre-defined external members
+df = df[df['SAM Account Name'].isin(lastlogons['Username'])]
 df = df[~df['Display Name'].isin(manhattan['Displayname'])]
 df = df[~df['Display Name'].isin(ext1['Displayname'])]
 df = df[~df['Display Name'].isin(ext2['Displayname'])]
