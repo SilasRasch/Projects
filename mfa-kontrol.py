@@ -50,7 +50,7 @@ for s in new_strings: # Remove all entries containing specific string values -> 
     df1 = df1[~df1['DisplayName'].str.lower().str.startswith(s.lower())]
     df2 = df2[~df2['DisplayName'].str.lower().str.startswith(s.lower())]
 
-excluded = pd.read_excel(f'excel/filters/MFAFilter.xlsx')  # Filter out all external members
+excluded = pd.read_excel(f'excel/filters/MFAFilter.xlsx')  # Filter out excluded members
 df1 = df1[~df1['DisplayName'].isin(excluded['DisplayName'])]
 df2 = df2[~df2['DisplayName'].isin(excluded['DisplayName'])]
 
