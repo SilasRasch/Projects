@@ -2,7 +2,7 @@ StormEvents
 | extend elapsedTime = datetime_diff('minute', EndTime, StartTime)
 | summarize AvgTimeElapsed = avg(elapsedTime) by Month = getmonth(StartTime)
 | sort by Month
-| extend Minutes = AvgTimeElapsed % 60
-| extend Hours = (AvgTimeElapsed - Minutes) / 60
-| extend Days = (Hours - (Hours % 24)) / 24
-| project Month, AvgTimeElapsed1 = strcat(toint(Days), ":", toint(Hours-(Days*24)), ":", toint(Minutes)), AvgTimeElapsed
+| extend Minutes = AvgTimeElapsed % 60, 
+Hours = (AvgTimeElapsed - (AvgTimeElapsed % 60)) / 60 % 24, 
+Days = ((AvgTimeElapsed - (AvgTimeElapsed % (60*24)))) / (60*24)
+| project Month, AvgTimeElapsed = strcat(toint(Days), ":", toint(Hours), ":", toint(Minutes))
