@@ -4,5 +4,8 @@ StormEvents
 | sort by Month
 | extend Minutes = AvgTimeElapsed % 60, 
 Hours = (AvgTimeElapsed - (AvgTimeElapsed % 60)) / 60 % 24, 
-Days = ((AvgTimeElapsed - (AvgTimeElapsed % (60*24)))) / (60*24)
-| project Month, AvgTimeElapsed = strcat(toint(Days), ":", toint(Hours), ":", toint(Minutes))
+Days = (AvgTimeElapsed - (AvgTimeElapsed % (60*24))) / (60*24)
+| project Month, Days = case(Days < 10, strcat("0", toint(Days)), tostring(toint(Days))), 
+Hours = case(Hours < 10, strcat("0", toint(Hours)), tostring(toint(Hours))), 
+Minutes = case(Minutes < 10, strcat("0", toint(Minutes)), tostring(toint(Minutes)))
+| project Month, AvgTimeElapsed = strcat(Days, ":", Hours, ":", Minutes)
