@@ -71,7 +71,6 @@ print('Filtering data...')
 df = df[df['Days since password last set'] >= 90] # Remove all entries below or equal to 90
 df = df[df['Account Status'] == "Enabled"] # Remove all entries without enabled account
 
-
 print(f'Removing entries containing \n{new_strings}')
 for s in new_strings: # Remove all entries containing specific string values -> see top of document
     df = df[~df['Display Name'].str.contains(s, case=False)]
@@ -93,6 +92,8 @@ daysAgo = 90
 lastlogons = pd.read_excel('excel/last logon.xlsx')
 lastlogons = lastlogons[lastlogons['UserLastLogon'] >= pd.Timestamp.now()-pd.Timedelta(daysAgo, 'd')] # Remove users whose last logon was more than daysAgo:
 
+print(lastlogons)
+
 manhattan = pd.read_csv(f'excel/filters/manhattan.csv', sep=";") # Filter out everyone in Manhattan
 ext1 = pd.read_csv(f'excel/filters/ext1.csv', sep=";")  # Filter out pre-defined external members
 ext2 = pd.read_csv(f'excel/filters/ext2.csv', sep=";")  # Filter out pre-defined external members
@@ -104,6 +105,8 @@ df = df[~df['Display Name'].isin(ext1['Displayname'])]
 df = df[~df['Display Name'].isin(ext2['Displayname'])]
 df = df[~df['Display Name'].isin(excluded['Display Name'])]
 df = df[~df['Display Name'].isin(ext['Display Name'])]
+
+print(df)
 
 print('Filtering is done')
 
