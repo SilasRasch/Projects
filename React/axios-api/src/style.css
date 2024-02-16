@@ -1,0 +1,81 @@
+:root {
+    --grey: rgb(41, 41, 41)
+}
+
+html {
+    background-color: var(--grey);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white
+}
+
+.root {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.title {
+    color: red
+}
+
+.movie-wrapper {
+    background-color: grey;
+    padding: 2em;
+    border-radius: 2em;
+    display: grid;
+    z-index: 1;
+}
+
+.movie-wrapper * {
+    text-align: left;
+    margin: 0.5em 0 0.5em 0;
+    padding: 0;
+}
+
+.movie-poster {
+    width: 30vw;
+    inset: 0px 0px 20px 10px rgba(0, 0, 0, 0.6);
+}
+
+.plot {
+    width: 30vw;
+}
+
+.movie-list {
+    margin-right: 2em;
+    background-color: grey;
+    padding: 2em;
+    border-radius: 2em;
+    text-align: left;
+    z-index: 1000;
+}
+
+.list-element {
+    text-decoration: none;
+    list-style-type: none;
+    max-width: fit-content;
+    padding: 0.5em;
+    margin: 0.5em;
+    transition: 0.2s;
+    border-radius: 1em;
+}
+
+.list-element:hover {
+    cursor: pointer;
+    background-color: var(--grey);
+}
+
+.list-title {
+    margin: 0 0 1em 0.5em;
+}
+
+.animate {
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+  }
+  
+  @keyframes animate-fade {
+    0% { opacity: 0; transform: translateX(-100px); }
+    100% { opacity: 1; transform: translateX(0px)}
+  }
