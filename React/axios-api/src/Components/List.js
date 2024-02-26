@@ -18,8 +18,8 @@ class List extends Component {
         return(
             <div className='movie-list animate'>
                 <h1 className='list-title'>{this.props.title}</h1>
-                {this.state.movies.map(movie => {return <h4 className='list-element' 
-                onClick={() => this.onMovieSelect(movie)} key={movie.Title}>{movie.Title} {movie.Year}</h4>})}
+                {this.state.movies.map(movie => { return <h4 className='list-element' 
+                onClick={() => this.onMovieSelect(movie)} key={movie.Title}>{movie.Title} {movie.Year}</h4> })}
             </div>
         )
     }
