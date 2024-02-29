@@ -1,0 +1,15 @@
+C:\Projects\C#\brewery\bin\Debug\net8.0\brewery.exe
+C:\Projects\C#\brewery\bin\Debug\net8.0\brewery.deps.json
+C:\Projects\C#\brewery\bin\Debug\net8.0\brewery.runtimeconfig.json
+C:\Projects\C#\brewery\bin\Debug\net8.0\brewery.dll
+C:\Projects\C#\brewery\bin\Debug\net8.0\brewery.pdb
+C:\Projects\C#\brewery\obj\Debug\net8.0\brewery.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\C#\brewery\obj\Debug\net8.0\brewery.AssemblyInfoInputs.cache
+C:\Projects\C#\brewery\obj\Debug\net8.0\brewery.AssemblyInfo.cs
+C:\Projects\C#\brewery\obj\Debug\net8.0\brewery.csproj.CoreCompileInputs.cache
+C:\Projects\C#\brewery\obj\Debug\net8.0\brewery.sourcelink.json
+C:\Projects\C#\brewery\obj\Debug\net8.0\brewery.dll
+C:\Projects\C#\brewery\obj\Debug\net8.0\refint\brewery.dll
+C:\Projects\C#\brewery\obj\Debug\net8.0\brewery.pdb
+C:\Projects\C#\brewery\obj\Debug\net8.0\brewery.genruntimeconfig.cache
+C:\Projects\C#\brewery\obj\Debug\net8.0\ref\brewery.dll
