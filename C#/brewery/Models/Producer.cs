@@ -2,10 +2,10 @@
 
 public class Producer<T> where T : new()
 {
-    private Buffer<T> _buffer;
+    private BoundedBuffer<T> _buffer;
     public int ItemsProduced { get; }
 
-    public Producer(Buffer<T> buffer)
+    public Producer(BoundedBuffer<T> buffer)
     {
         _buffer = buffer;
         ItemsProduced = 0;
