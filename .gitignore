@@ -3,3 +3,12 @@
 *.xlsx
 salary.py
 test.py
+C\#/brewery/obj/brewery.csproj.nuget.dgspec.json
+C\#/brewery/obj/brewery.csproj.nuget.g.props
+C\#/brewery/obj/Debug/net8.0/apphost.exe
+C\#/brewery/obj/Debug/net8.0/brewery.AssemblyInfo.cs
+C\#/brewery/obj/Debug/net8.0/brewery.AssemblyInfoInputs.cache
+C\#/brewery/obj/Debug/net8.0/brewery.assets.cache
+C\#/brewery/obj/Debug/net8.0/brewery.GeneratedMSBuildEditorConfig.editorconfig
+C\#/brewery/obj/project.assets.json
+C\#/brewery/obj/project.nuget.cache
