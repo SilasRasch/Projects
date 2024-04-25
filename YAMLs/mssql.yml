@@ -1,0 +1,23 @@
+services:
+  mssql:
+    environment: 
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: Microsoftlmao!
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    volumes:
+      - ./var/lib/docker/volumes/vol_mssql/_data
+    restart: always
+    healthcheck:
+        test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Microsoftlmao! -Q 'SELECT 1' || exit 1"]
+        interval: 10s
+        retries: 10
+        start_period: 10s
+        timeout: 3s     
+  api:
+    build: app/Formula1API
+    expose: 
+      - "80"
+    ports: 
+      - "5101:80"
+    depends_on:
+      - mssql

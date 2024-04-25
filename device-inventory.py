@@ -41,6 +41,7 @@ eol_filter = ["1511", "1607", "1703", "1709", "1803", "1809", "1903", "1909", "2
 eol = df
 #eol['Last device update'] = pd.to_datetime(eol['Last device update'], format='%d%b%Y:%H:%M:%S.%f') # NOT DONE!!!!! CONVERT TO DATE TIME AND REMOVE ALL INACTIVE MORE THAN 1 MONTH??
 eol = eol[eol['Onboarding Status'] == "Onboarded"]
+eol = eol[eol['OS Platform'] == "Windows10"]
 eol = eol[eol['OS Version'].isin(eol_filter)] # Check if the OS Version is in the filter
 eol = eol['OS Version'].value_counts().sort_index() # Group by and sort by index
 

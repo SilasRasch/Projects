@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "name": "Henrik Høltzer",
+      "id": 1
+    },
+    {
+      "name": "Harold Strosin",
+      "id": 4
+    },
+    {
+      "name": "Jessie Anderson PhD",
+      "id": 7
+    }
+  ],
+  "albums": [
+    {
+      "id": 10,
+      "title": "Redux Thunk is funny",
+      "userId": 1
+    },
+    {
+      "userId": 4,
+      "title": "Intelligent Bronze Keyboard",
+      "id": 16
+    }
+  ],
+  "photos": [
+    {
+      "albumId": 17,
+      "url": "https://loremflickr.com/150/150/abstract?lock=89289",
+      "id": 1
+    },
+    {
+      "albumId": 17,
+      "url": "https://loremflickr.com/150/150/abstract?lock=794",
+      "id": 2
+    },
+    {
+      "albumId": 17,
+      "url": "https://loremflickr.com/150/150/abstract?lock=30870",
+      "id": 3
+    },
+    {
+      "albumId": 17,
+      "url": "https://loremflickr.com/150/150/abstract?lock=50411",
+      "id": 4
+    },
+    {
+      "albumId": 17,
+      "url": "https://loremflickr.com/150/150/abstract?lock=80492",
+      "id": 7
+    },
+    {
+      "albumId": 17,
+      "url": "https://loremflickr.com/150/150/abstract?lock=7843",
+      "id": 8
+    },
+    {
+      "albumId": 17,
+      "url": "https://loremflickr.com/150/150/abstract?lock=6939",
+      "id": 9
+    },
+    {
+      "albumId": 17,
+      "url": "https://loremflickr.com/150/150/abstract?lock=76135",
+      "id": 10
+    }
+  ]
+}
