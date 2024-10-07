@@ -88,6 +88,7 @@ df = df[~df['Display Name'].str.startswith("-")]
 # Remove all users present in following CSV/XLSX files  #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
+print("Filtering out logins more than 90 days ago")
 daysAgo = 90
 lastlogons = pd.read_excel('excel/last logon.xlsx')
 lastlogons = lastlogons[lastlogons['UserLastLogon'] >= pd.Timestamp.now()-pd.Timedelta(daysAgo, 'd')] # Remove users whose last logon was more than daysAgo:
